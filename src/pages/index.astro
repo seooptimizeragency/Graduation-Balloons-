@@ -1,0 +1,201 @@
+---
+import Layout from "../layouts/Layout.astro";
+import heroImg from "../assets/hero.jpg";
+import archImg from "../assets/arch-garland.webp";
+import columnImg from "../assets/column.webp";
+import bouquetImg from "../assets/centerpiece.webp";
+import gradImg from "../assets/graduation.webp";
+import numberImg from "../assets/number-balloons.webp";
+import garlandImg from "../assets/garland.webp";
+---
+
+<Layout
+  title="Best Graduation Balloons Near Me"
+  description="Make your graduation celebration unforgettable with premium balloon arches, bouquets, columns and centerpieces. Custom designs in your school colors with same-day local delivery across NJ & NYC. Order now!"
+>
+  <!-- HERO -->
+  <section class="hero" style="padding-top:70px;padding-bottom:70px">
+    <div class="container">
+      <div>
+        <p class="kicker" style="color:var(--gold)">🎓 Graduation Balloon Experts</p>
+        <h1>Best <span class="gold">Graduation Balloons</span> Near Me — Delivery &amp; Decor</h1>
+        <p class="lead">Make your graduation celebration unforgettable with premium balloon arches, centerpieces, bouquets and columns — custom-made in your school colors and theme.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="/contact/">Get a Free Quote</a>
+          <a class="btn btn-outline" style="border-color:#fff;color:#fff" href="/catalog/">Browse Catalog</a>
+        </div>
+        <div class="badges">
+          <span>Same-day local delivery</span>
+          <span>Custom school colors</span>
+          <span>Professional setup</span>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src={heroImg.src} alt="Colorful graduation balloon decorations" width="800" height="600" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <div class="center">
+        <p class="kicker">What we do</p>
+        <h2 class="section-title">Graduation Decorations for Every Celebration</h2>
+        <p class="section-sub">From a grand entrance arch to a personalized helium bouquet — high-quality materials and professional craftsmanship ensure your event stands out.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <img src={archImg.src} alt="Organic balloon garland arch" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Balloon Arches &amp; Garlands</h3>
+            <p>Showstopping entrance arches and organic garlands in classic black &amp; gold or your school colors — perfect photo backdrops.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={columnImg.src} alt="Balloon column" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Balloon Columns</h3>
+            <p>Statement columns for stages, entrances and aisles. Stable weighted stands — great for indoor and outdoor setups.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={bouquetImg.src} alt="Balloon bouquet centerpiece" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Bouquets &amp; Centerpieces</h3>
+            <p>Personalized helium bouquets and table centerpieces with the graduate's name, year balloons and school logo designs.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={numberImg.src} alt="Gold number balloons" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Number &amp; Foil Balloons</h3>
+            <p>Giant graduation-year foil numbers, "Congrats Grad" letter balloons and metallic finishes for a bespoke touch.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={garlandImg.src} alt="Balloon garland decoration" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Photo Backdrops</h3>
+            <p>Interactive photo booth backdrops with themed props and helium balloons — made for unforgettable pictures.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src={gradImg.src} alt="Graduation balloon setup" width="600" height="450" loading="lazy" />
+          <div class="card-body">
+            <h3>Full Event Packages</h3>
+            <p>Rental packages with reusable, high-quality décor — arches, columns and bouquets planned around your venue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section style="background:#fff">
+    <div class="container split">
+      <div>
+        <p class="kicker">Why Balloons Lane</p>
+        <h2 class="section-title">What Sets Us Apart</h2>
+        <p class="section-sub" style="margin-bottom:0">Many stores sell DIY kits and bulk balloons. We specialize in graduation balloons tailored to your school's colors and theme — with quality, personalization and hassle-free service.</p>
+        <ul class="check-list">
+          <li><strong>Custom school colors</strong> — black &amp; gold, blue &amp; white, or any combo</li>
+          <li><strong>Weatherproof outdoor options</strong> that withstand wind and rain</li>
+          <li><strong>Eco-friendly choices</strong> with biodegradable latex</li>
+          <li><strong>Express pickup &amp; same-day delivery</strong> across NJ &amp; NYC</li>
+          <li><strong>Budget-friendly packages</strong> — from kindergarten to PhD celebrations</li>
+        </ul>
+      </div>
+      <div>
+        <img src={columnImg.src} alt="Professional balloon column setup" width="700" height="525" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section>
+    <div class="container center">
+      <p class="kicker">Service areas</p>
+      <h2 class="section-title">We Deliver Across New Jersey &amp; New York</h2>
+      <p class="section-sub">We make your NJ celebration shine with custom arches and foil designs — delivered across Newark, Jersey City and Princeton, plus Manhattan, Brooklyn and Staten Island.</p>
+      <div class="cat-pills" style="justify-content:center">
+        <a href="/contact/">Newark</a>
+        <a href="/contact/">Jersey City</a>
+        <a href="/contact/">Princeton</a>
+        <a href="/contact/">Manhattan</a>
+        <a href="/contact/">Brooklyn</a>
+        <a href="/contact/">Staten Island</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="center">
+        <p class="kicker">Reviews</p>
+        <h2 class="section-title">Real Experiences From Happy Graduates</h2>
+      </div>
+      <div class="grid-3" style="margin-top:36px">
+        <div class="quote-card">
+          <div class="stars">★★★★★</div>
+          <p>"We had a great time with the balloon arch. It was a fun part of our graduation party — we would love to order again!"</p>
+          <div class="who">— Emily Carter</div>
+        </div>
+        <div class="quote-card">
+          <div class="stars">★★★★★</div>
+          <p>"Our whole group enjoyed the setup. It was nice to sit back, relax, and spend time together. We are glad we tried it!"</p>
+          <div class="who">— Michael Bennett</div>
+        </div>
+        <div class="quote-card">
+          <div class="stars">★★★★★</div>
+          <p>"This was our first time ordering custom balloons, and we really enjoyed it. We took lots of photos and made lovely memories."</p>
+          <div class="who">— Rachel Morgan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container" style="max-width:820px">
+      <div class="center">
+        <p class="kicker">FAQ</p>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div style="margin-top:32px">
+        <details class="faq-item">
+          <summary>How much do graduation balloon decorations cost?</summary>
+          <div class="answer">Pricing depends on your date, design, and setup size. Request a quote with your event details and we'll send an estimate tailored to your celebration.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you deliver and set up?</summary>
+          <div class="answer">Yes! We offer same-day local delivery across New Jersey and New York City, plus professional setup for arches, columns and backdrops.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you match my school colors?</summary>
+          <div class="answer">Absolutely — custom school colors are our specialty. Tell us your school's colors and we'll design arches, bouquets and centerpieces to match.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you have options for outdoor events?</summary>
+          <div class="answer">Yes. Our weatherproof balloons withstand wind and rain, and columns come with weighted stands for stability. We also offer eco-friendly biodegradable latex options.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How far in advance should I order?</summary>
+          <div class="answer">For custom designs, 1–2 weeks is ideal. Need a last-minute bouquet? We offer express pickup — just call <a href="tel:+17186752820">718-675-2820</a>.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to Plan Your Graduation Party?</h2>
+        <p>Request a free quote — share your date, school colors and party size.</p>
+        <a class="btn" href="/contact/">Get Your Free Quote Today 🎓</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import archImg from "../assets/arch-garland.webp";
+import columnImg from "../assets/column.webp";
+import bouquetImg from "../assets/centerpiece.webp";
+import numberImg from "../assets/number-balloons.webp";
+import garlandImg from "../assets/garland.webp";
+import halfArchImg from "../assets/half-arch.webp";
+import towerImg from "../assets/tower.webp";
+import jumboImg from "../assets/jumbo.webp";
+import ledImg from "../assets/led-balloons.webp";
+import gradImg from "../assets/graduation.webp";
+import birthdayImg from "../assets/birthday.webp";
+import christmasImg from "../assets/christmas.webp";
+import valentineImg from "../assets/valentine.jpg";
+import newyearImg from "../assets/newyear.webp";
+import promImg from "../assets/prom.webp";
+
+const everyday = [
+  { img: archImg, name: "Organic Balloon Garland Arch", desc: "Custom garland arch in your colors — the showstopping entrance piece." },
+  { img: halfArchImg, name: "Balloon Half Arch", desc: "Elegant half arch for stages, doorways and photo spots." },
+  { img: columnImg, name: "Balloon Column", desc: "Classic spiral or themed column with weighted base." },
+  { img: towerImg, name: "Balloon Tower Stand", desc: "Tall tower display for entrances and corners." },
+  { img: bouquetImg, name: "Centerpiece Bouquet Set", desc: "Table-ready balloon bouquets with decorative bases." },
+  { img: numberImg, name: "Gold Number Balloons", desc: "Giant foil numbers — graduation years, ages, milestones." },
+  { img: jumboImg, name: "Jumbo Round Balloons", desc: "Big statement balloons, solid and metallic finishes." },
+  { img: ledImg, name: "LED Light-Up Balloons", desc: "Clear jumbo balloons with LED lights — magical at night." },
+];
+
+const occasions = [
+  { img: gradImg, name: "Graduation", desc: "Caps, diplomas & class-year designs in school colors." },
+  { img: birthdayImg, name: "Birthday & Anniversary", desc: "Milestone numbers, confetti and chrome balloons." },
+  { img: promImg, name: "Prom Night", desc: "Glamorous backdrops and balloon walls for prom." },
+  { img: valentineImg, name: "Valentine's Day", desc: "Heart foils, red & pink bouquets and romantic setups." },
+];
+
+const holidays = [
+  { img: christmasImg, name: "Christmas", desc: "Red, green & gold festive balloons and winter wonderland themes." },
+  { img: newyearImg, name: "New Year", desc: "Metallic countdown balloons and party-ready displays." },
+  { img: garlandImg, name: "Easter & Spring", desc: "Pastel garlands and cheerful seasonal bouquets." },
+  { img: ledImg, name: "Halloween", desc: "Orange, black & purple spooky-fun balloon decor." },
+];
+---
+
+<Layout
+  title="Catalog"
+  description="Browse the Balloons Lane catalog: balloon arches, garlands, columns, bouquets, number balloons and decor for every occasion, holiday and theme."
+>
+  <section class="post-hero">
+    <div class="container">
+      <p class="kicker" style="color:var(--gold)">Our catalog</p>
+      <h1>Balloon Decor for Every Occasion</h1>
+      <p class="meta">Arches · Garlands · Columns · Bouquets · Numbers · Centerpieces</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cat-pills">
+        <a href="#everyday" class="active">Everyday</a>
+        <a href="#occasions">Occasions</a>
+        <a href="#holidays">Holidays</a>
+        <a href="#themes">All Themes</a>
+      </div>
+
+      <h2 class="section-title" id="everyday" style="margin-bottom:24px">Everyday Designs</h2>
+      <div class="grid-4" style="margin-bottom:56px">
+        {everyday.map((p) => (
+          <div class="card">
+            <img src={p.img.src} alt={p.name} width="600" height="450" loading="lazy" />
+            <div class="card-body">
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="section-title" id="occasions" style="margin-bottom:24px">Occasions &amp; Events</h2>
+      <div class="grid-4" style="margin-bottom:56px">
+        {occasions.map((p) => (
+          <div class="card">
+            <img src={p.img.src} alt={p.name} width="600" height="450" loading="lazy" />
+            <div class="card-body">
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="section-title" id="holidays" style="margin-bottom:24px">Holidays</h2>
+      <div class="grid-4" style="margin-bottom:56px">
+        {holidays.map((p) => (
+          <div class="card">
+            <img src={p.img.src} alt={p.name} width="600" height="450" loading="lazy" />
+            <div class="card-body">
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="section-title" id="themes" style="margin-bottom:24px">Every Theme &amp; Occasion We Cover</h2>
+      <div class="tag-list">
+        <div>
+          <h3>🎓 Education</h3>
+          <ul><li>Graduation / Congrats</li><li>Prom Night</li><li>School Festivals</li><li>Back to School</li></ul>
+        </div>
+        <div>
+          <h3>🎂 Milestone Birthdays</h3>
+          <ul><li>1st Birthday</li><li>Sweet 16</li><li>21st, 30th, 40th, 50th</li><li>Quinceañera</li></ul>
+        </div>
+        <div>
+          <h3>💍 Wedding</h3>
+          <ul><li>Engagement Party</li><li>Bridal Shower</li><li>Wedding Reception</li><li>Anniversary</li></ul>
+        </div>
+        <div>
+          <h3>👶 Baby</h3>
+          <ul><li>Baby Shower</li><li>Gender Reveal</li><li>It's a Boy / Girl</li><li>Christening &amp; Baptism</li></ul>
+        </div>
+        <div>
+          <h3>🎄 Holidays</h3>
+          <ul><li>New Year's Eve</li><li>Valentine's Day</li><li>Easter</li><li>Halloween</li><li>Thanksgiving</li><li>Christmas</li></ul>
+        </div>
+        <div>
+          <h3>🏢 Corporate</h3>
+          <ul><li>Grand Openings</li><li>Product Launches</li><li>Trade Shows</li><li>Retirement Party</li></ul>
+        </div>
+        <div>
+          <h3>🎨 Finishes</h3>
+          <ul><li>Chrome &amp; Metallic</li><li>Pastel &amp; Chiffon</li><li>Neon &amp; Bright</li><li>Confetti-filled</li></ul>
+        </div>
+        <div>
+          <h3>💌 &amp; More</h3>
+          <ul><li>Get Well</li><li>Thank You</li><li>Photo Shoots</li><li>Room &amp; Stage Decor</li></ul>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:48px">
+        <a class="btn btn-gold" href="/contact/">Request a Custom Design 🎈</a>
+      </div>
+    </div>
+  </section>
+</Layout>

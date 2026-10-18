@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  date: string;
+  image?: string;
+  imageAlt?: string;
+}
+const { title, description, date, image, imageAlt } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <section class="post-hero">
+    <div class="container">
+      <p class="kicker" style="color:var(--gold)">Balloon blog</p>
+      <h1>{title}</h1>
+      <p class="meta">📅 {date} · by Balloons Lane</p>
+    </div>
+  </section>
+  <section>
+    <div class="container post-body">
+      {image && <img src={image} alt={imageAlt ?? title} style="margin-bottom:28px" />}
+      <slot />
+      <div class="cta-band" style="margin-top:48px">
+        <h2>Planning a Party?</h2>
+        <p>Get custom balloons in your colors — delivered across NJ &amp; NYC.</p>
+        <a class="btn" href="/contact/">Get a Free Quote 🎈</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import gradImg from "../assets/graduation.webp";
+---
+
+<Layout
+  title="About Us"
+  description="Balloons Lane — premium graduation balloons and event decor across New Jersey and New York City. Custom designs in your school colors with professional setup."
+>
+  <section class="post-hero">
+    <div class="container">
+      <p class="kicker" style="color:var(--gold)">About us</p>
+      <h1>We Make Celebrations Unforgettable</h1>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div>
+        <h2 class="section-title">Balloons Lane 🎈</h2>
+        <p>We're a balloon decor studio serving New Jersey and New York City — from Newark, Jersey City and Princeton to Manhattan, Brooklyn and Staten Island.</p>
+        <p style="margin-top:14px">Our specialty is <strong>graduation balloons</strong>: arches, garlands, columns, bouquets and centerpieces customized in your school colors and theme. Every design uses high-quality materials and professional craftsmanship, so your event looks picture-perfect.</p>
+        <ul class="check-list">
+          <li>Custom designs for every school and theme</li>
+          <li>Same-day local delivery available</li>
+          <li>Professional setup for arches &amp; backdrops</li>
+          <li>Eco-friendly balloon options</li>
+        </ul>
+        <div style="margin-top:26px">
+          <a class="btn btn-gold" href="/contact/">Work With Us</a>
+        </div>
+      </div>
+      <div>
+        <img src={gradImg.src} alt="Graduation balloon celebration by Balloons Lane" width="700" height="525" />
+      </div>
+    </div>
+  </section>
+</Layout>

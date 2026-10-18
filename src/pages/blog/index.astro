@@ -1,0 +1,61 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const posts = [
+  {
+    slug: "halloween-balloons",
+    title: "Halloween Balloons: Spooky-Fun Decor Ideas",
+    desc: "Orange, black and purple balloon ideas for Halloween parties — arches, garlands, bouquets and photo backdrops.",
+    date: "December 15, 2025",
+  },
+  {
+    slug: "thanksgiving-balloon",
+    title: "Thanksgiving Balloon Decor: Warm & Festive Ideas",
+    desc: "Fall-color balloon garlands, centerpieces and bouquets that make your Thanksgiving gathering feel extra special.",
+    date: "December 15, 2025",
+  },
+  {
+    slug: "new-year-balloons",
+    title: "New Year Balloons: Ring It In With Style",
+    desc: "Metallic countdown balloons, number foils and midnight-ready displays for an unforgettable New Year's Eve.",
+    date: "December 15, 2025",
+  },
+  {
+    slug: "balloon-blog",
+    title: "Balloon Decor 101: Tips, Shapes & Arrangements",
+    desc: "Your starter guide to balloon decor — shapes, arrangements, color combos and pro tips for any celebration.",
+    date: "September 29, 2025",
+  },
+];
+---
+
+<Layout
+  title="Balloon Blog"
+  description="Balloon decor tips, holiday ideas and arrangement guides from the Balloons Lane team."
+>
+  <section class="post-hero">
+    <div class="container center">
+      <p class="kicker" style="color:var(--gold)">Learn &amp; get inspired</p>
+      <h1>The Balloon Blog</h1>
+      <p class="meta">Tips, holiday ideas &amp; decor guides</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="grid-3">
+        {posts.map((p) => (
+          <a href={`/blog/${p.slug}/`} style="text-decoration:none">
+            <div class="card">
+              <div class="card-body">
+                <p class="kicker">📅 {p.date}</p>
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
+                <p class="price">Read more →</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
