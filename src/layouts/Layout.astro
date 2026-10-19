@@ -33,6 +33,9 @@ const siteName = "Balloons Lane";
           <span class="brand-mark">🎈</span>
           <span class="brand-name">Balloons <span>Lane</span></span>
         </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="nav">
           <a href="/">Home</a>
           <a href="/catalog/">Catalog</a>
@@ -105,5 +108,25 @@ const siteName = "Balloons Lane";
     </footer>
 
     <a class="wa-float" href="https://wa.me/17184270968" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+    <script>
+      const menuBtn = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+      if (menuBtn && nav) {
+        menuBtn.addEventListener('click', () => {
+          const open = nav.classList.toggle('open');
+          menuBtn.classList.toggle('active', open);
+          menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        nav.querySelectorAll('a').forEach((a) => {
+          a.addEventListener('click', () => {
+            nav.classList.remove('open');
+            menuBtn.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.setAttribute('aria-label', 'Open menu');
+          });
+        });
+      }
+    </script>
   </body>
 </html>
